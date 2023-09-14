@@ -88,8 +88,8 @@ export const themeSettings = (mode) => {
             values:{
                 xs: 0,
                 sm: 600,
-                md: 900,
-                lg: 1100,
+                md: 1000,
+                lg: 1200,
                 xl: 1536
             }
         },
@@ -121,36 +121,36 @@ export const themeSettings = (mode) => {
         },
 
         typography: {
-            fontfamily: 'Poppins',
+            fontFamily: 'Poppins, sans-serif',
             fontSize: 12,
             // The H's
             h1: {
-                fontfamily: 'Poppins',
+                fontFamily: 'Poppins, sans-serif',
                 fontSize: 40,
             },
 
             h2: {
-                fontfamily: 'Poppins',
+                fontFamily: 'Poppins, sans-serif',
                 fontSize: 32,
             },
 
             h3: {
-                fontfamily: 'Poppins',
+                fontFamily: 'Poppins, sans-serif',
                 fontSize: 24,
             },
 
             h4: {
-                fontfamily: 'Poppins',
+                fontFamily: 'Poppins, sans-serif',
                 fontSize: 20,
             },
 
             h5: {
-                fontfamily: 'Poppins',
+                fontFamily: 'Poppins, sans-serif',
                 fontSize: 16,
             },
 
             h6: {
-                fontfamily: 'Poppins',
+                fontFamily: 'Poppins, sans-serif',
                 fontSize: 14,
             },
         }

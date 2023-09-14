@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AppBar, Box, Button, IconButton, Stack, Toolbar, useTheme, Menu, MenuItem, Avatar, Typography, Drawer } from '@mui/material';
 import { ColorModContext } from '../../theme';
-import navImg from './navlogo.png';
+import navImg from '../../assets/navbar/navlogo.png';
 import styled from '@emotion/styled';
 
 // Icons
@@ -11,8 +11,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 // Images
-import usa from '../../assets/usa.jpeg'
-import saudi from '../../assets/saudi.png'
+import usa from '../../assets/navbar/usa.jpeg'
+import saudi from '../../assets/navbar/saudi.png'
+import { Link } from 'react-router-dom';
 
 
 const StyledContainer = styled(Box)({
@@ -25,44 +26,69 @@ const StyledToolbar = styled(Toolbar)({
 
 })
 
-const StyledButton = styled(Button)({
+const StyledButton = styled(Button)(({ responsive }) => ({
     color: 'white',
-    fontSize: '12px',
+    fontSize: responsive ? '14px' : '14px',
     fontFamily: 'Poppins',
     fontWeight: 600,
     textTransform: 'none',
 
-    '&::before': {
-        content: '""',
-        display: "block",
-        position: 'absolute',
-        bottom: '2px',
-        left: '1',
-        width: "0%",
-        height: "2px ",
-        backgroundColor: "white",
-        borderRadius: '10%',
-        transition: '0.3s'
-    },
-    '&:hover::before': {
-        display: 'block',
-        width: '50%',
-        transition: '0.3s',
-    },
+    ...(responsive
+        ? {
+            '&::before': {
+                content: '""',
+                display: "block",
+                position: 'absolute',
+                bottom: '2px',
+                left: '1',
+                width: "0%",
+                height: "2px ",
+                backgroundColor: "white",
+                borderRadius: '10%',
+                transition: '0.3s'
+            },
+            '&:hover::before': {
+                display: 'block',
+                width: '25%',
+                transition: '0.3s',
+            },
 
-    '&:hover': {
-        color: '#9da7c0',
-        background: 'transparent'
-    }
+            '&:hover': {
+                color: '#9da7c0',
+                background: 'transparent'
 
-})
+            }
+        } : {
+            '&::before': {
+                content: '""',
+                display: "block",
+                position: 'absolute',
+                bottom: '2px',
+                left: '1',
+                width: "0%",
+                height: "2px ",
+                backgroundColor: "white",
+                borderRadius: '10%',
+                transition: '0.3s'
+            },
+            '&:hover::before': {
+                display: 'block',
+                width: '50%',
+                transition: '0.3s',
+            },
 
-const ResponsiveMenuButton = styled(Button)({
-    color: 'white',
-    fontFamily: 'Poppins',
-    fontSize: '14px',
+            '&:hover': {
+                color: '#9da7c0',
+                background: 'transparent'
+            }
+        }
+    )
 
-})
+
+
+}))
+
+
 
 function Navbar() {
     const colorMode = useContext(ColorModContext);
@@ -76,38 +102,70 @@ function Navbar() {
     const [anchorEl, setAnchorEl] = useState(null);
 
     const handleArrowDropDownClick = (event) => {
-        setAnchorEl(event.currentTarget); 
-        setOpen(true); 
+        setAnchorEl(event.currentTarget);
+        setOpen(true);
     };
 
     const handleCloseMenu = () => {
-        setAnchorEl(null); 
-        setOpen(false); 
+        setAnchorEl(null);
+        setOpen(false);
     };
+
+
+    // Nav Item lol xd 
+    const navItems = [
+        'Home',
+        'About Us',
+        'Partnerships',
+        'Services',
+        'Solutions',
+        'Offers',
+        'Contact Us',
+    ];
+
+    // Nav Items
+    const navButtons = navItems.map((item, index) => {
+        const sanitizedItem = item.replace(' ', '').toLowerCase();
+        
+        return item === 'Home' ? (
+            <StyledButton key={index} component={Link} to={`/`}>{item}</StyledButton>
+          ) : (
+            <StyledButton key={index} component={Link} to={`/${sanitizedItem}`}>{item}</StyledButton>
+          );
+        
+    })
+
+    // For responsive
+    const navResponsiveButtons = navItems.map((item, index) => {
+        const sanitizedItem = item.replace(' ', '').toLowerCase();
+        return item === 'Home' ? (
+            <StyledButton key={index} component={Link} to={`/`} responsive={true}>{item}</StyledButton>
+          ) : (
+            <StyledButton key={index} component={Link} to={`/${sanitizedItem}`} responsive={true}>{item}</StyledButton>
+          );
+        
+    })
+
+
 
     return (
         <Box >
-            <AppBar position='sticky' sx={{ background: 'linear-gradient(90deg, rgba(54,35,128,1) 15%, rgba(73,204,147,1) 90%)', padding: '10px 0' }}>
-                <Box sx={{ px: {xs: 2, sm:8, lg:17} }}>
+            <AppBar position='sticky' sx={{ background: 'linear-gradient(90deg, rgba(54,35,128,1) 15%, rgba(73,204,147,1) 90%)', padding: '10px 0',transition: '0.3s all' }}>
+                <Box sx={{ px: { xs: 2, sm: 5, md: 8, lg: 11 } }}>
                     <StyledToolbar>
+
                         {/* Resposive Icon */}
-                        <IconButton sx={{ display: { md: 'block', lg: 'none' } }}>
+                        <IconButton sx={{ display: { xs: 'block', md: 'none' } }}>
                             <DarkModeIcon sx={{ color: 'white' }} onClick={colorMode.toggleColorMode}></DarkModeIcon>
                         </IconButton>
 
                         {/* default */}
                         <img src={navImg} alt="Logo" style={{ height: '25px' }} />
-                        <Stack display={{ xs: 'none', lg: 'block' }} gap={0.5} direction={'row'}>
-                            <StyledButton >Home</StyledButton>
-                            <StyledButton >About Us</StyledButton>
-                            <StyledButton >Patnerships</StyledButton>
-                            <StyledButton >Services</StyledButton>
-                            <StyledButton >Solutions</StyledButton>
-                            <StyledButton >Offers</StyledButton>
-                            <StyledButton >Contact Us</StyledButton>
+                        <Stack display={{ xs: 'none', md: 'block' }} gap={0.5} direction={'row'}>
+                            {navButtons}
                         </Stack>
 
-                        <Stack display={{ xs: 'none', lg: 'block' }} direction={'row'} gap={1}>
+                        <Stack display={{ xs: 'none', md: 'block' }} direction={'row'} gap={1}>
                             <Button
                                 sx={{ gap: 1, px: '10px', color: 'white', fontSize: '12px', border: '1px solid white', background: 'rgba(255,255,255,0.2)', borderRadius: '999px', textTransform: 'none', }}
                             > Login <ArrowForwardIcon sx={{ color: 'white', fontSize: '16px' }} />
@@ -118,7 +176,8 @@ function Navbar() {
                             </IconButton>
                             <ArrowDropDownIcon onClick={handleArrowDropDownClick}></ArrowDropDownIcon>
                         </Stack>
-
+                        
+                        {/* dropdown */}
                         <Menu
                             id="demo-positioned-menu"
                             open={open}
@@ -150,12 +209,13 @@ function Navbar() {
 
 
                         {/* Responsive Menu */}
-                        <Box sx={{ display: { md: 'block', lg: 'none' } }}>
+                        <Box sx={{ display: { md: 'block', md: 'none' } }}>
                             <IconButton onClick={() => setDrawer(true)}>
                                 <MenuIcon sx={{ color: 'white' }}></MenuIcon>
                             </IconButton>
                         </Box>
 
+                        {/* Drawer Functionality */}
                         <Drawer
                             anchor='right'
                             open={drawer}
@@ -165,18 +225,13 @@ function Navbar() {
                             <Stack direction={'column'} gap={1} justifyContent={'center'}
                                 sx={{
                                     background: 'linear-gradient(45deg, rgba(54,35,128,1) 30%, rgba(0,0,0,1) 95%);',
-                                    width: '300px',
-                                    height: '100% '
-                                }}
-                            >
+                                    width: {xs: 180, sm: 250, md: 300 },
+                                    height: '100% ',
+                                    transition: '0.3s all'
+                                }}>
 
-                                <ResponsiveMenuButton >Home</ResponsiveMenuButton>
-                                <ResponsiveMenuButton >About Us</ResponsiveMenuButton>
-                                <ResponsiveMenuButton >Patnerships</ResponsiveMenuButton>
-                                <ResponsiveMenuButton >Services</ResponsiveMenuButton>
-                                <ResponsiveMenuButton >Solutions</ResponsiveMenuButton>
-                                <ResponsiveMenuButton >Offers</ResponsiveMenuButton>
-                                <ResponsiveMenuButton >Contact Us</ResponsiveMenuButton>
+                                {/* defined up  */}
+                                {navResponsiveButtons}
                             </Stack>
 
                         </Drawer>
