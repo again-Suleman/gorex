@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 // Components
 import Cards from './cards';
 import { Items } from './data';
-import { useTheme } from '@emotion/react';
+import Bottom from './bottom';
 
 
 
@@ -31,7 +31,7 @@ function Carousal() {
 
     return (
         <>
-            <Box sx={{ py: 10, fontFamily: 'Poppins' }}>
+            <Box sx={{ py: 10, bgcolor: '#fafafa'}}>
                 <Slider {...settings} >
                     {Items.map((item) => (
                         <Box key={item.id} >
@@ -39,6 +39,9 @@ function Carousal() {
                         </Box>
                     ))}
                 </Slider>
+            </Box>
+            <Box  sx={{ py: 10, bgcolor: '#fafafa'}}>
+                <Bottom />
             </Box>
         </>
     );

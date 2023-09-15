@@ -10,14 +10,14 @@ function Cards({ item }) {
         <Box sx={{ mx: { xs: 2, sm: 5, md: 8, lg: 11 }, fontFamily: 'Poppins' }}>
             <Stack direction={{ xs: 'column-reverse', lg: 'row' }} sx={{}}>
                 {/* Left Card */}
-                <Box flex={1}>
-                    <RightCard item={item} />
+                <Box flex={1} >
+                    <LeftCard item={item} />
 
                 </Box>
 
                 {/* Right Card  */}
-                <Stack direction={'column'} gap={1} flex={1} >
-                    <LeftCard item={item} />
+                <Stack direction={'column'} gap={1} flex={1} sx={{ fontFamily: 'Poppins'}}>
+                    <RightCard item={item} />
                 </Stack>
             </Stack>
         </Box >
