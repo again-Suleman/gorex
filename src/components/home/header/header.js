@@ -4,13 +4,13 @@ import { Stack } from '@mui/system'
 
 
 // Componenets
-import OrangeButton from '../buttons/orangeButton'
-import TransparentButton from '../buttons/transparentButton'
+import OrangeButton from '../../buttons/orangeButton'
+import TransparentButton from '../../buttons/transparentButton'
 
 // Images
-import appStore from '../../assets/header/desktop-appstore.png'
-import playStore from '../../assets/header/desktop-play.png'
-import headerImg from '../../assets/header/main-header-mockup.png'
+import appStore from '../../../assets/header/desktop-appstore.png'
+import playStore from '../../../assets/header/desktop-play.png'
+import headerImg from '../../../assets/header/main-header-mockup.png'
 import { useTheme } from '@emotion/react'
 import { Link } from 'react-router-dom'
 

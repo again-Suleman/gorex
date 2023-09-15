@@ -92,7 +92,6 @@ const StyledButton = styled(Button)(({ responsive }) => ({
 
 function Navbar() {
     const colorMode = useContext(ColorModContext);
-    const theme = useTheme()
 
     // Handing Drawer
     const [drawer, setDrawer] = useState(false)
