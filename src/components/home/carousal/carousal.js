@@ -25,6 +25,7 @@ function Carousal() {
         autoplay: true,
         autoplaySpeed: 1000,
         pauseOnHover: true,
+        arrows: false,
         
 
     };

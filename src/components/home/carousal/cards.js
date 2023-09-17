@@ -7,7 +7,7 @@ import RightCard from './rightCard';
 
 function Cards({ item }) {
     return (
-        <Box sx={{ mx: { xs: 2, sm: 5, md: 8, lg: 11 }, fontFamily: 'Poppins' }}>
+        <Box sx={{ mx: { xs: 1.4, sm: 5, md: 8, lg: 11 }, fontFamily: 'Poppins' }}>
             <Stack direction={{ xs: 'column-reverse', lg: 'row' }} sx={{}}>
                 {/* Left Card */}
                 <Box flex={1} >

@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router";
 
 // Pages
 import Navbar from "./components/navbar/navbar";
+import Footer from "./components/footer/footer";
 import Home from "./pages/home/home";
 import About from "./pages/about-us/aboutPage";
 import Contact from "./pages/contact-us/contactPage";
@@ -24,6 +25,7 @@ function App() {
         <Route path="/offers" element={<Offers />} />
         <Route path="/contact us" element={<Contact />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
