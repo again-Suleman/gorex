@@ -1,7 +1,6 @@
 import React from 'react'
 import { workingItems } from './data'
 import { Box, Stack, Typography } from '@mui/material'
-import { useTheme } from '@emotion/react'
 
 //components
 import Title from '../../reusable/Title'
@@ -32,7 +31,6 @@ const styleBox1 = {
 
 
 function Working() {
-    const theme = useTheme()
     return (
         <>
             <Box sx={{ py: 15 }}>

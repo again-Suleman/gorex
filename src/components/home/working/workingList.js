@@ -52,10 +52,10 @@ function WorkingList({ item }) {
                         <img src={item.img} alt={item.title} />
                     </Box>
                     <Stack direction={'column'} >
-                        <Typography variant='h3' sx={{ fontWeight: 600, fontSize: { xs: '18px', md: '24px' }, fontFamily: 'Poppins', pb: 1, width: { xs: '100%', sm: '70%', md: '60%', } }}>
+                        <Typography variant='h3' sx={{ fontWeight: 600, fontSize: { xs: '18px', md: '24px' }, pb: 1, width: { xs: '100%', sm: '70%', md: '60%', } }}>
                             {item.title}
                         </Typography>
-                        <Typography variant='h4' sx={{ fontFamily: 'Poppins', fontSize: { xs: '12px', sm: '16px', md: '18px' }, width: { xs: '100%', sm: '85%', md: '75%', } }}>
+                        <Typography variant='h4' sx={{color: '#8b8b8b',  fontSize: { xs: '12px', sm: '16px', md: '18px' }, width: { xs: '100%', sm: '85%', md: '75%', } }}>
                             {item.text}
                         </Typography>
                     </Stack>

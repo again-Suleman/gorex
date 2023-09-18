@@ -22,6 +22,7 @@ function OrangeButton(props) {
           m: 1,
           textTransform: 'none',
           color: 'white',
+          outline: '1px solid white',
           gap: 1,
           fontSize: '14px',
           fontFamily: 'Poppins',

@@ -5,6 +5,8 @@ import { Box, Button, Container } from '@mui/material'
 import Header from '../../components/home/header/header';
 import Carousal from '../../components/home/carousal/carousal';
 import Working from '../../components/home/working/working';
+import WhyGorex from '../../components/home/whyGorex/whyGorex';
+import Demand from '../../components/home/gorexDemand/demand';
 
 function Home() {
   return (
@@ -12,6 +14,8 @@ function Home() {
         <Header />
         <Carousal />
         <Working />
+        <WhyGorex />
+        <Demand />
     </div>
   )
 }

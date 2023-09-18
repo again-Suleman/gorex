@@ -32,7 +32,7 @@ function Title({ heading, title }) {
                         },
 
                     }}>
-                    {title}
+                    {title.toUpperCase()}
                 </Typography>
 
                 <Typography variant='h1'
