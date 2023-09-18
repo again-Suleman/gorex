@@ -1,14 +1,18 @@
-import { Stack } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 import React from 'react'
-import LeftBottom from './leftBottom'
-import RightBottom from './rightBottom'
+import LeftBottom from './leftBottom';
+import RightBottom from './rightBottom';
 
 function WorkingBottom() {
   return (
     <div>
-      <Stack direction={'row'}>
-            <LeftBottom />
-            <RightBottom />
+      <Stack direction={{ xs: 'column', md: 'row' }} sx={{ pt: 10}}>
+        <Box flex={1}>
+          <LeftBottom  />
+        </Box>
+        <Box flex={1}>
+          <RightBottom />
+        </Box>
       </Stack>
     </div>
   )

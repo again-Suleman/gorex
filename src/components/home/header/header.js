@@ -6,10 +6,9 @@ import { Stack } from '@mui/system'
 // Componenets
 import OrangeButton from '../../buttons/orangeButton'
 import TransparentButton from '../../buttons/transparentButton'
+import AppStore from '../../reusable/applicationStore'
 
 // Images
-import appStore from '../../../assets/header/desktop-appstore.png'
-import playStore from '../../../assets/header/desktop-play.png'
 import headerImg from '../../../assets/header/main-header-mockup.png'
 import { useTheme } from '@emotion/react'
 import { Link } from 'react-router-dom'
@@ -47,15 +46,7 @@ function Header() {
                   <Typography variant='h4' sx={{ fontSize: { xs: '20px', md: '22px' }, pt: 3 }}>Step into the modern Automotive Ecosystem</Typography>
                 </Stack>
 
-                <Stack direction={{ xs: 'column', sm: 'row' }} gap={2} >
-                  <a href="https://apps.apple.com/pk/app/gorex-customer/id1633313842" target="_blank" rel="noopener noreferrer">
-                    <img src={appStore} alt="App Store" />
-                  </a>
-
-                  <a href="https://play.google.com/store/apps/details?id=com.gorexcustomer&pli=1" target="_blank" rel="noopener noreferrer">
-                    <img src={playStore} alt="Play Store" />
-                  </a>
-                </Stack>
+                <AppStore />
               </Box>
 
               <Box sx={{ my: 10 }}>

@@ -51,7 +51,7 @@ function Working() {
                     ))}
                 </Stack>
 
-                <Stack sx={{px:{ xs: 2, sm: 5, md: 8, lg: 11 },  background: 'linear-gradient(90deg, rgba(54,35,128,1) 15%, rgba(73,204,147,1) 90%)' }}>
+                <Stack sx={{px:{ xs: 2, sm: 5, md: 8, lg: 11 }, mt: 15,  background: 'linear-gradient(90deg, rgba(54,35,128,1) 15%, rgba(73,204,147,1) 90%)', overflow: 'hidden' }}>
                     <WorkingBottom />
                 </Stack>
             </Box>

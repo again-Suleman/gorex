@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTheme } from '@emotion/react';
 import { Stack, Chip, List, Typography } from '@mui/material'
 
 // Icons
@@ -6,10 +7,8 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 
-// Assests
-import appStore from '../../../assets/header/desktop-appstore.png'
-import playStore from '../../../assets/header/desktop-play.png'
-import { useTheme } from '@emotion/react';
+// Components
+import AppStore from '../../reusable/applicationStore';
 
 
 
@@ -45,15 +44,7 @@ function RightCard({ item }) {
 
             <Stack gap={3} sx={{ pt: 5, pb: 10 }}>
                 <Typography variant='h4' fontWeight={600} fontFamily={'Poppins'}>To claim the offer, download the app.  </Typography>
-                <Stack direction={{ xs: 'column', sm: 'row' }} gap={2} >
-                    <a href="https://apps.apple.com/pk/app/gorex-customer/id1633313842" target="_blank" rel="noopener noreferrer">
-                        <img src={appStore} alt="App Store" />
-                    </a>
-
-                    <a href="https://play.google.com/store/apps/details?id=com.gorexcustomer&pli=1" target="_blank" rel="noopener noreferrer">
-                        <img src={playStore} alt="Play Store" />
-                    </a>
-                </Stack>
+                <AppStore />
             </Stack>
 
         </>
