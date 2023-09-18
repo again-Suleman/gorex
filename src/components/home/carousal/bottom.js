@@ -19,7 +19,7 @@ function Bottom() {
                             alignItems: 'center',
                             justifyContent: 'center',
                             position: 'relative',
-                            py: { xs: 5, md: 0 },
+                           
 
 
                             '.subject ': {

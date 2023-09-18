@@ -3,6 +3,10 @@ import React from 'react'
 
 
 function DemandList({ item }) {
+    let bgcolor = item.id % 2 !== 0
+        ? 'linear-gradient(90deg, rgba(255,139,0,0.1) 10%, rgba(255,255,255,0) 90%)'
+        : 'white';
+        
     return (
         <>
             <Grid item xs={12} md={4}>
@@ -12,7 +16,7 @@ function DemandList({ item }) {
                     minHeight: '300px',
                     borderRadius: '40px',
                     transition: '0.3s all ease-in-out',
-                    background: 'linear-gradient(90deg, rgba(255,139,0,0.1) 10%, rgba(255,255,255,0) 90%)',
+                    background: `${bgcolor}`,
 
                     '.img': { transition: '0.3s all ease-in-out' },
 

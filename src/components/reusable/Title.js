@@ -7,12 +7,11 @@ function Title({ heading, title }) {
     const theme = useTheme()
     return (
         <div>
-            <Box px={0}>
+            <Box sx={{ px: { xs: 2, sm: 0 } }}>
                 <Typography variant='h3'
                     sx={{
                         fontSize: { xs: '14px', sm: '16px', md: '20px' },
                         fontWeight: 600,
-                        fontFamily: 'Poppins',
                         display: 'flex',
                         flexDirection: 'row',
                         alignItems: 'center',
@@ -37,12 +36,10 @@ function Title({ heading, title }) {
 
                 <Typography variant='h1'
                     sx={{
-                        fontSize: { xs: '20px', sm: '32px', md: '48px' },
+                        fontSize: { xs: '24px', sm: '32px', md: '48px' },
                         fontWeight: 600,
-                        fontFamily: 'Poppins',
-                        width: { xs: '100', md: '60%', },
+                        width: { xs: '100%', md: '60%', },
                     }}>
-
                     {heading}
                 </Typography>
             </Box>

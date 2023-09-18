@@ -41,7 +41,7 @@ function Carousal() {
                     ))}
                 </Slider>
             </Box>
-            <Box  sx={{ py: 10, bgcolor: '#fafafa'}}>
+            <Box  sx={{ pt: 10, bgcolor: '#fafafa'}}>
                 <Bottom />
             </Box>
         </>
