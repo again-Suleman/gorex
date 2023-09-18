@@ -11,7 +11,7 @@ import WhyGorexList from './whyGorexList';
 function WhyGorex() {
     return (
         <>
-            <Box sx={{ px: { xs: 2, sm: 5, md: 8, lg: 11 }, }}>
+            <Box sx={{ px: { xs: 2, sm: 5, md: 8, lg: 11 }}}>
                 <Title title='Why Gorex' heading='The Ultimate Automotive Services Marketplace.' />
                 <Box>
                     <Grid container sx={{ my: 10, }}>

@@ -40,7 +40,7 @@ function Title({ heading, title }) {
                         fontSize: { xs: '20px', sm: '32px', md: '48px' },
                         fontWeight: 600,
                         fontFamily: 'Poppins',
-                        width: { xs: '100', md: '70%', },
+                        width: { xs: '100', md: '60%', },
                     }}>
 
                     {heading}

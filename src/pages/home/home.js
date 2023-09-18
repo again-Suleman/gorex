@@ -7,6 +7,7 @@ import Carousal from '../../components/home/carousal/carousal';
 import Working from '../../components/home/working/working';
 import WhyGorex from '../../components/home/whyGorex/whyGorex';
 import Demand from '../../components/home/gorexDemand/demand';
+import Features from '../../components/home/features/features';
 
 function Home() {
   return (
@@ -16,6 +17,8 @@ function Home() {
         <Working />
         <WhyGorex />
         <Demand />
+        <Features />
+
     </div>
   )
 }
