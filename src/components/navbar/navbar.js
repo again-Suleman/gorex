@@ -149,7 +149,7 @@ function Navbar() {
 
     return (
         <Box >
-            <AppBar position='sticky' sx={{ background: 'linear-gradient(90deg, rgba(54,35,128,1) 15%, rgba(73,204,147,1) 90%)', padding: '10px 0',transition: '0.3s all' }}>
+            <AppBar position='fixed' sx={{ background: 'linear-gradient(90deg, rgba(54,35,128,1) 15%, rgba(73,204,147,1) 90%)', padding: '10px 0',transition: '0.3s all' }}>
                 <Box sx={{ px: { xs: 2, sm: 5, md: 8, lg: 11 } }}>
                     <StyledToolbar>
 

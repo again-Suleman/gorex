@@ -38,7 +38,7 @@ function Working() {
                     <Box sx={styleBox1}>
                         <Box>
                             <Title title='HOW GOREX WORKS' heading='The Ultimate Destination for Auto Services and Repairs' />
-                            <Typography variant='h3' sx={{ width: { xs: '100%',md: '80%'}, py: 4, pb: 9, color: '#8b8b8b', fontSize: { xs: '14px', sm: '16px', md: '20px' }, fontFamily: 'Poppins' }}>With the Gorex app, booking automotive services is now easier and more convenient than ever. customers can choose from a wide range of services and products from trusted service providers, and the Gorex app ensures a hassle-free booking process</Typography>
+                            <Typography variant='h3' sx={{ width: { xs: '100%',md: '80%'},px: { xs: 1, sm: 0 }, py: 4, pb: {xs: 2, sm:8}, color: '#8b8b8b', fontSize: { xs: '14px', sm: '16px', md: '20px' }}}>With the Gorex app, booking automotive services is now easier and more convenient than ever. customers can choose from a wide range of services and products from trusted service providers, and the Gorex app ensures a hassle-free booking process</Typography>
                         </Box>
                     </Box>
 

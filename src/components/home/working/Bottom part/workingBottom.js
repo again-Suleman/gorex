@@ -6,11 +6,11 @@ import RightBottom from './rightBottom';
 function WorkingBottom() {
   return (
     <div>
-      <Stack direction={{ xs: 'column', md: 'row' }} sx={{ pt: 10}}>
+      <Stack direction={{ xs: 'column', md: 'row' }} sx={{ pt: 10,}}>
         <Box flex={1}>
           <LeftBottom  />
         </Box>
-        <Box flex={1}>
+        <Box flex={1} >
           <RightBottom />
         </Box>
       </Stack>

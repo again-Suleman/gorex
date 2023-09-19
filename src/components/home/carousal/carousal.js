@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 // Components
-import Cards from './cards';
+import Cards from '../../reusable/cards/cards';
 import { Items } from './data';
 import Bottom from './bottom';
 
@@ -41,7 +41,7 @@ function Carousal() {
                     ))}
                 </Slider>
             </Box>
-            <Box  sx={{ py: 10, bgcolor: '#fafafa'}}>
+            <Box  sx={{ pt: 10, bgcolor: '#fafafa'}}>
                 <Bottom />
             </Box>
         </>

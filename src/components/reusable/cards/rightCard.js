@@ -8,7 +8,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 
 // Components
-import AppStore from '../../reusable/applicationStore';
+import AppStore from '../applicationStore';
 
 
 
