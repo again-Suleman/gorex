@@ -19,48 +19,50 @@ function Bottom() {
                             alignItems: 'center',
                             justifyContent: 'center',
                             position: 'relative',
-                           
-
-
+                        
                             '.subject ': {
                                 position: 'relative',
+                                transform: {xs: 'scale(0.7) translateY(85px)', sm: 'scale(1)'},
+                                transition: '0.3s all ease-in-out',
                                 zIndex: 1
                             },
 
                             '.img-container': {
                                 position: 'relative',
                             },
+
                             '.img1, .img2': {
                                 position: 'absolute',
                                 transition: '0.5s all',
+                                transform: {xs: 'scale(0.6)', sm: 'scale(1)'},
                             },
                             '.img1': {
-                                right: '100px',
-                                top: '-50px',
+                                right: {xs: '60px', sm:'100px'},
+                                top: {xs: '20px', sm:'-50px'},
                                 zIndex: 0
                             },
                             '.img2': {
-                                left: '-140px',
-                                top: '-150px',
+                                left: {xs: '-190px', sm:'-140px'},
+                                top: {xs: '-40px', sm:'-150px'},
                                 zIndex: 1
 
                             },
                             '.subject:hover + .img-container .img1': {
-                                transform: 'translateX(20px)',
+                                transform: {xs: 'translateX(20px) scale(0.6)'  ,sm:'translateX(20px) scale(1)'},
                             },
                             '.subject:hover + .img-container .img2': {
-                                transform: 'translateY(20px)',
+                                transform: {xs: 'translateY(20px) scale(0.6)'  ,sm:'translateY(20px) scale(1)'},
                             },
                         }}
                     >
                         <Box
                             className="background-shape"
-                            style={{
+                            sx={{
                                 position: 'absolute',
-                                bottom: '-230px',
+                                bottom: { xs:'-190px' ,sm:'-230px'},
                                 background: 'linear-gradient(186deg, rgba(255,139,0,0.4) 7%, rgba(255,255,255,0) 50%)',
-                                width: '500px',
-                                height: '500px',
+                                width: { xs:'350px' ,sm:'500px'},
+                                height: { xs:'350px' ,sm:'500px'},
                                 borderRadius: '50%',
                                 zIndex: 0,
                             }}

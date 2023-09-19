@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 // Components
-import Cards from './cards';
+import Cards from '../../reusable/cards/cards';
 import { Items } from './data';
 import Bottom from './bottom';
 

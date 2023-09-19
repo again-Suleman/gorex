@@ -16,18 +16,17 @@ function RightBottom() {
           display: 'flex',
           justifyContent: 'center',
           position: 'relative',
-          pt: 5,
+          pt: {xs: 0,  sm:10, md: 5},
 
 
           '.subject ': {
-            
-            transform: {xs: 'scale(0.8) translateY(18%)', sm: 'scale(0.9) translateY(7%)' ,md: 'scale(1.0)'},
+            transform: {xs: 'scale(0.55) translateY(45%)', sm: 'scale(0.9) translateY(8%)' ,md: 'scale(0.9) translateY(15%)', lg: 'scale(1) translateY(0%)'},
             transition: '0.5s all',
             zIndex: 1
           },
 
           '.subject:hover': {
-            transform: {xs: 'scale(1)', sm: 'scale(1) ' ,md: 'scale(1.1)'},
+            transform: {xs: 'scale(0.6) translateY(35%)', sm: 'scale(1) ' ,md: 'scale(1) translateY(15%)', lg: 'scale(1.1) translateY(0%)'},
             transition: '0.5s all',
           },
 
@@ -40,23 +39,23 @@ function RightBottom() {
             transition: '0.5s all',
           },
           '.img1': {
-            transform: {xs: 'scale(0.75)', sm: 'scale(1)' ,md: 'scale(1)'},
-            right: {xs: '250px',  md:'350px'},
-            bottom: '30px',
+            transform: {xs: 'scale(0.5)', sm: 'scale(1)' ,md: 'scale(1)'},
+            right: {xs: '190px',  sm:'250px', md:'300px'},
+            bottom: {xs: '-30px',  sm:'30px'},
             zIndex: 0
           },
           '.img2': {
-            transform: {xs: 'scale(0.8)', sm: 'scale(1)' ,md: 'scale(1.1)'},
-            right: '30px',
-            top: '-40px',
+            transform: {xs: 'scale(0.5)', sm: 'scale(1)' ,md: 'scale(1.1)'},
+            right: {xs: '50px',  sm:'30px'},
+            top: {xs: '80px',  sm:'-40px'},
             zIndex: 0
 
           },
           '.subject:hover + .img-container .img1': {
-            transform: 'translateX(-30px)',
+            transform: {xs:'translateX(-30px) scale(0.5)' ,sm:'translateX(-30px) scale(1)'},
           },
           '.subject:hover + .img-container .img2': {
-            transform: 'translateY(-30px)',
+            transform: {xs:'translateY(-30px) scale(0.5)' ,sm:'translateY(-30px) scale(1)'},
           },
         }}
       >

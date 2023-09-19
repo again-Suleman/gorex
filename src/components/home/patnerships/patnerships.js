@@ -4,7 +4,7 @@ import React from 'react'
 //components
 import LeftPatnershipSection from './leftPatnershipSection'
 import RightPatnershipSection from './rightPatnershipSection'
-import PatnershipBottom from './patnershipBottom'
+import ContactBottom from '../../reusable/contactBottom'
 
 function Patnerships() {
     return (
@@ -19,7 +19,7 @@ function Patnerships() {
             </Stack>
 
             <Box sx={{ px: { xs: 2, sm: 5, md: 8, lg: 11 }, py: 15,  overflow: 'hidden'  }} >
-                <PatnershipBottom />
+                <ContactBottom />
             </Box>
 
         </>
