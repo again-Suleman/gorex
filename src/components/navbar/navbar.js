@@ -125,13 +125,14 @@ function Navbar() {
     // Nav Items
     const navButtons = navItems.map((item, index) => {
         const sanitizedItem = item.replace(' ', '').toLowerCase();
-        
+        console.log(sanitizedItem)
+
         return item === 'Home' ? (
             <StyledButton key={index} component={Link} to={`/`}>{item}</StyledButton>
-          ) : (
+        ) : (
             <StyledButton key={index} component={Link} to={`/${sanitizedItem}`}>{item}</StyledButton>
-          );
-        
+        );
+
     })
 
     // For responsive
@@ -139,17 +140,15 @@ function Navbar() {
         const sanitizedItem = item.replace(' ', '').toLowerCase();
         return item === 'Home' ? (
             <StyledButton key={index} component={Link} to={`/`} responsive={true}>{item}</StyledButton>
-          ) : (
+        ) : (
             <StyledButton key={index} component={Link} to={`/${sanitizedItem}`} responsive={true}>{item}</StyledButton>
-          );
-        
+        );
+
     })
-
-
 
     return (
         <Box >
-            <AppBar position='fixed' sx={{ background: 'linear-gradient(90deg, rgba(54,35,128,1) 15%, rgba(73,204,147,1) 90%)', padding: '10px 0',transition: '0.3s all' }}>
+            <AppBar position='fixed' sx={{ background: 'linear-gradient(90deg, rgba(54,35,128,1) 15%, rgba(73,204,147,1) 90%)', padding: '10px 0', transition: '0.3s all', boxShadow: 'none' }}>
                 <Box sx={{ px: { xs: 2, sm: 5, md: 8, lg: 11 } }}>
                     <StyledToolbar>
 
@@ -175,7 +174,7 @@ function Navbar() {
                             </IconButton>
                             <ArrowDropDownIcon onClick={handleArrowDropDownClick}></ArrowDropDownIcon>
                         </Stack>
-                        
+
                         {/* dropdown */}
                         <Menu
                             id="demo-positioned-menu"
@@ -224,7 +223,7 @@ function Navbar() {
                             <Stack direction={'column'} gap={1} justifyContent={'center'}
                                 sx={{
                                     background: 'linear-gradient(45deg, rgba(54,35,128,1) 30%, rgba(0,0,0,1) 95%);',
-                                    width: {xs: 180, sm: 250, md: 300 },
+                                    width: { xs: 180, sm: 250, md: 300 },
                                     height: '100% ',
                                     transition: '0.3s all'
                                 }}>

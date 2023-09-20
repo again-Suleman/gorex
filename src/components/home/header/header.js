@@ -12,7 +12,7 @@ function Header() {
 
   return (
     <>
-      <Box sx={{ position: 'relative', py: 10 }}>
+      <Box sx={{ position: 'relative'}}>
 
         {/* Background Curve :? */}
         <Box sx={{

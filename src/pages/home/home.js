@@ -1,5 +1,4 @@
-import React, { useContext } from 'react'
-import { Box, Button, Container } from '@mui/material'
+import React from 'react'
 
 // Components
 import Header from '../../components/home/header/header';
@@ -9,6 +8,7 @@ import WhyGorex from '../../components/home/whyGorex/whyGorex';
 import Demand from '../../components/home/gorexDemand/demand';
 import Features from '../../components/home/features/features';
 import Patnerships from '../../components/home/patnerships/patnerships'
+import ContactBottom from '../../components/reusable/contactBottom';
 
 function Home() {
   return (
@@ -20,6 +20,7 @@ function Home() {
         <Demand />
         <Features />
         <Patnerships />
+        <ContactBottom />
     </div>
   )
 }

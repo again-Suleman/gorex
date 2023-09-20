@@ -1,10 +1,11 @@
 import { Box, Grid } from '@mui/material'
-import React from 'react'
+import React, { useRef } from 'react'
 import Title from '../../reusable/Title'
 
 //components
-import {featureItems} from './data'
+import { featureItems } from './data'
 import FeatureItems from './featuresList'
+import Fade from 'react-reveal/Fade';
 
 
 function Features() {

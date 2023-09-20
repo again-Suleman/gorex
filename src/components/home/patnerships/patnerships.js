@@ -18,10 +18,6 @@ function Patnerships() {
                 </Box>
             </Stack>
 
-            <Box sx={{ px: { xs: 2, sm: 5, md: 8, lg: 11 }, py: 15,  overflow: 'hidden'  }} >
-                <ContactBottom />
-            </Box>
-
         </>
     )
 }
