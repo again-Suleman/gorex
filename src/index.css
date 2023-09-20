@@ -7,19 +7,26 @@ html, body, #root, .app, .content {
 }
 
 .app {
-
   position: relative;
 }
 
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
 ::-webkit-scrollbar-track{
-  background: #e0e0e0;
+  background-color: #8b8b8b;
 }
 
 ::-webkit-scrollbar-thumb{
-  background: #888;
+  background-color: #282c34;
 }
 
-::-webkit-scrollbar-track:hover{
-  background: #555;
+::-webkit-scrollbar-thumb:hover{
+  background: #49cc93;
 }
+
+
+
 

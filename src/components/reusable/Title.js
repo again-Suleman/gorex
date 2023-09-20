@@ -3,8 +3,13 @@ import { Box, Typography } from '@mui/material'
 import React from 'react'
 
 
-function Title({ heading, title }) {
+function Title({ heading, title, white, sideWhite }) {
     const theme = useTheme()
+
+    const color = white ? 'white' : `${theme.palette.orangeAccent.main}`
+    const colorH = white ? 'white' : 'black'
+    const colorS = sideWhite ? 'white' : `${theme.palette.orangeAccent.main}`
+
     return (
         <div>
             <Box sx={{ px: { xs: 2, sm: 0 } }}>
@@ -17,7 +22,7 @@ function Title({ heading, title }) {
                         alignItems: 'center',
                         letterSpacing: 1,
                         my: 1,
-                        color: theme.palette.orangeAccent.main,
+                        color: color,
 
                         '&::before': {
                             content: '""',
@@ -25,7 +30,7 @@ function Title({ heading, title }) {
                             width: "25px",
                             height: "5px",
                             mr: 2,
-                            backgroundColor: `${theme.palette.orangeAccent.main}`,
+                            backgroundColor: colorS,
                             borderRadius: '10%',
                             transition: '0.3s all ease-in-out'
                         },
@@ -36,6 +41,7 @@ function Title({ heading, title }) {
 
                 <Typography variant='h1'
                     sx={{
+                        color: colorH,
                         fontSize: { xs: '24px', sm: '32px', md: '48px' },
                         fontWeight: 600,
                         width: { xs: '100%', md: '60%', },
