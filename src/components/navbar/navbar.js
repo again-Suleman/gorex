@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AppBar, Box, Button, IconButton, Stack, Toolbar, useTheme, Menu, MenuItem, Avatar, Typography, Drawer } from '@mui/material';
 import { ColorModContext } from '../../theme';
-import navImg from '../../assets/navbar/navlogo.png';
 import styled from '@emotion/styled';
 
 // Icons
@@ -11,6 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 // Images
+import navImg from '../../assets/navbar/navlogo.png';
 import usa from '../../assets/navbar/usa.jpeg'
 import saudi from '../../assets/navbar/saudi.png'
 import { Link } from 'react-router-dom';
@@ -222,7 +222,7 @@ function Navbar() {
 
                             <Stack direction={'column'} gap={1} justifyContent={'center'}
                                 sx={{
-                                    background: 'linear-gradient(45deg, rgba(54,35,128,1) 30%, rgba(0,0,0,1) 95%);',
+                                    background: 'linear-gradient(45deg, rgba(54,35,128,1) 5%, rgba(0,0,0,1) 90%)',
                                     width: { xs: 180, sm: 250, md: 300 },
                                     height: '100% ',
                                     transition: '0.3s all'
