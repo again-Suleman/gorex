@@ -1,4 +1,3 @@
-
 import { Routes, Route } from "react-router";
 
 // Pages
@@ -29,7 +28,7 @@ function App() {
         <Route path="/contact us" element={<Contact />} />
       </Routes>
       </Box>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
