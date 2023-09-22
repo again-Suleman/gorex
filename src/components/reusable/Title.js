@@ -3,9 +3,11 @@ import { Box, Typography } from '@mui/material'
 import React from 'react'
 
 
-function Title({ heading, title, white, sideWhite }) {
+function Title({ heading, title, white, sideWhite, fullWidth }) {
     const theme = useTheme()
 
+    // Some Customized things
+    let width = fullWidth ? '100%' : '60%'
     const color = white ? 'white' : `${theme.palette.orangeAccent.main}`
     const colorH = white ? 'white' : 'black'
     const colorS = sideWhite ? 'white' : `${theme.palette.orangeAccent.main}`
@@ -42,9 +44,9 @@ function Title({ heading, title, white, sideWhite }) {
                 <Typography variant='h1'
                     sx={{
                         color: colorH,
-                        fontSize: { xs: '24px', sm: '32px', md: '48px' },
+                        fontSize: { xs: '22px', sm: '32px', md: '48px' },
                         fontWeight: 600,
-                        width: { xs: '100%', md: '60%', },
+                        width: { xs: '100%', md: width, },
                     }}>
                     {heading}
                 </Typography>
