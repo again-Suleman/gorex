@@ -207,7 +207,7 @@ function Navbar() {
 
 
                         {/* Responsive Menu */}
-                        <Box sx={{ display: { md: 'block', md: 'none' } }}>
+                        <Box sx={{ display: { xs: 'block', md: 'none' } }}>
                             <IconButton onClick={() => setDrawer(true)}>
                                 <MenuIcon sx={{ color: 'white' }}></MenuIcon>
                             </IconButton>

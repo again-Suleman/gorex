@@ -15,7 +15,7 @@ function TransparentButton(props) {
                     borderRadius: '999px',
                     border: `1px solid ${theme.palette.orangeAccent.main}`, // Use border for outline
                     width: '100%',
-                    maxWidth: '200px',
+                    maxWidth: '180px',
                     py: 1,
                     px: 3,
                     my: 1,
