@@ -8,16 +8,19 @@ function LeftCard({ item }) {
                 sx={{
                     display: 'flex',
                     justifyContent: 'center',
-                    alignItems: 'center',
+                    alignItems: 'flex-end',
+                    px: 2,
+                    minHeight: { md: '100%', lg: '70vh' },
+                    height: '100%',
+                    
                     '& img': {
-                        maxWidth: '100%',
-                        maxHeight: '100%',
+                        height: '100%',
+                        width: '100%',
                     }
 
                 }}>
                 <img src={item.image} alt={item.title} />
             </Box>
-
         </div>
     )
 }

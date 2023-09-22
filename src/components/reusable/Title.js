@@ -44,7 +44,7 @@ function Title({ heading, title, white, sideWhite, fullWidth }) {
                 <Typography variant='h1'
                     sx={{
                         color: colorH,
-                        fontSize: { xs: '24px', sm: '32px', md: '48px' },
+                        fontSize: { xs: '22px', sm: '32px', md: '48px' },
                         fontWeight: 600,
                         width: { xs: '100%', md: width, },
                     }}>
