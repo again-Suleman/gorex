@@ -83,6 +83,7 @@ export const tokens = (mode) => {
 export const themeSettings = (mode) => {
     const colors = tokens(mode)
 
+
     return {
         breakpoints:{
             values:{
@@ -106,6 +107,7 @@ export const themeSettings = (mode) => {
                     orangeAccent: {
                         main: colors.orangeAccent[500]
                     },
+                    
 
                 } : {
                     primary: {
@@ -116,42 +118,51 @@ export const themeSettings = (mode) => {
                     },
                     orangeAccent: {
                         main: colors.orangeAccent[500]
-                    }
+                    },
+                    
+
                 }),
         },
 
         typography: {
             fontFamily: "Poppins",
             fontSize: 12,
+          
             // The H's
             h1: {
                 fontFamily: 'Poppins',
                 fontSize: 48,
+              
             },
         
             h2: {
                 fontFamily: 'Poppins',
                 fontSize: 32,
+              
             },
         
             h3: {
                 fontFamily: 'Poppins',
                 fontSize: 28,
+                
             },
         
             h4: {
                 fontFamily: 'Poppins',
                 fontSize: 24,
+              
             },
         
             h5: {
                 fontFamily: 'Poppins',
                 fontSize: 18,
+               
             },
         
             h6: {
                 fontFamily: 'Poppins',
                 fontSize: 14,
+               
             },
         }
         

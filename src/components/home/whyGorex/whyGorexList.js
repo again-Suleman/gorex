@@ -20,7 +20,7 @@ function WhyGorexList({ item }) {
 
                             <Typography variant='h5' sx={{ fontWeight: 600, mt: 5, mb: 1 }}>{item.title}</Typography>
                             <Typography variant='h6' sx={{ mb: 2, color: '#ffd094' }}>{item.text}</Typography>
-                            <OrangeButton input='Contact Us' />
+                            <OrangeButton input='Contact Us' outline={true} />
                         </Card>
                     </>
                 ) : (

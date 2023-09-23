@@ -4,7 +4,7 @@ import { Box } from '@mui/material'
 // Components
 import Title from './Title'
 
-function WhiteTitle({ title, heading }) {
+function WhiteTitle({ title, heading, fullWidth }) {
     return (
         <>
             <Box sx={{
@@ -16,7 +16,7 @@ function WhiteTitle({ title, heading }) {
                 py: { xs: 3, md: 5 },
             }}>
                 <Box sx={{ px: { xs: 2, sm: 5, md: 8, lg: 11 }, }}>
-                    <Title white={true} title={title} heading={heading} />
+                    <Title white={true} title={title} heading={heading} fullWidth={fullWidth}/>
                 </Box>
             </Box>
 

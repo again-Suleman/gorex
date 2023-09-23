@@ -45,7 +45,7 @@ function RightBottom() {
             zIndex: 0
           },
           '.img2': {
-            transform: {xs: 'scale(0.5)', sm: 'scale(1)' ,md: 'scale(1.1)'},
+            transform: {xs: 'scale(0.5)', sm: 'scale(1)' ,md: 'scale(1)'},
             right: {xs: '50px',  sm:'30px'},
             top: {xs: '80px',  sm:'-40px'},
             zIndex: 0

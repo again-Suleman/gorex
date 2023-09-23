@@ -1,11 +1,14 @@
 import React from 'react'
 
-function Contact() {
+import Contact from '../../components/contact/contact'
+import ContactBottom from '../../components/reusable/contactBottom'
+
+function ContactPage() {
   return (
-    <div>
-      contact us
-    </div>
+    <>
+      <Contact /> 
+    </>
   )
 }
 
-export default Contact
+export default ContactPage

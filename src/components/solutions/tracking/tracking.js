@@ -24,7 +24,7 @@ function Tracking() {
                         typo3={"We have recently incorporated IOT Devices which will now offer many various forms of the latest tracking to our industry."}
                     />
                     <a href="https://tracking.me/" target="_blank" style={{ textDecoration: 'none' }}>
-                        <OrangeButton input={'Visit Tracking'} fullWidth={true} />
+                        <OrangeButton input={'Visit Tracking'}  />
                     </a>
                 </Stack>
             </Box>
