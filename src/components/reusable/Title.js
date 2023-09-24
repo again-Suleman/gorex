@@ -1,9 +1,15 @@
+import React, { useEffect } from 'react'
 import { useTheme } from '@emotion/react'
 import { Box, Typography } from '@mui/material'
-import React from 'react'
+
+// Animations
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 function Title({ heading, title, white, sideWhite, fullWidth }) {
+
     const theme = useTheme()
 
     // Some Customized things
@@ -12,8 +18,12 @@ function Title({ heading, title, white, sideWhite, fullWidth }) {
     const colorH = white ? 'white' : 'black'
     const colorS = sideWhite ? 'white' : `${theme.palette.orangeAccent.main}`
 
+    useEffect(() => {
+        AOS.init({ duration: "500", delay: "100", once: true });
+    }, [])
+
     return (
-        <div>
+        <div data-aos="fade-down">
             <Box sx={{ px: { xs: 2, sm: 0 } }}>
                 <Typography variant='h3'
                     sx={{

@@ -1,7 +1,7 @@
 import React from 'react'
 
+// Components
 import Contact from '../../components/contact/contact'
-import ContactBottom from '../../components/reusable/contactBottom'
 
 function ContactPage() {
   return (

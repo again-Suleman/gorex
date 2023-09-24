@@ -10,6 +10,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 // Components
 import OrangeButton from '../../../buttons/orangeButton';
 import { OnDemandServiceItems } from './onDemandData';
+import { Link } from 'react-router-dom';
 
 function OnDemandService() {
     const theme = useTheme();
@@ -77,7 +78,9 @@ function OnDemandService() {
                     <Stack direction={'column'}>
                         <Typography variant='h4' sx={{ fontWeight: 600, mt: 5, mb: 1 }}>Need Help with Gorex?</Typography>
                         <Typography variant='h6' sx={{ mb: 2, color: '#ffd094' }}>Our support team is here for you! Contact us anytime for assistance with anything.</Typography>
-                        <OrangeButton input='Contact Us' outline={true} />
+                        <Link to='/contactus'>
+                            <OrangeButton input='Contact Us' outline={true} />
+                        </Link>
                     </Stack>
                 </Box>
             </Stack>

@@ -23,7 +23,7 @@ function RedSea() {
                         typo3={"With Red Sea Digital, your data is safe and secure. They use advanced encryption methods, making the platform accessible only to authorized personnel. Unlock the power of AI-based audience measurement and take your operations to the next level."}
                     />
                     <a href="https://rsd.ai/" target="_blank" style={{ textDecoration: 'none' }}>
-                        <OrangeButton input={'Visit Red Sea'}  />
+                        <OrangeButton input={'Visit Red Sea'} />
                     </a>
                 </Stack>
             </Box>

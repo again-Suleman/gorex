@@ -1,17 +1,25 @@
+import React, { useEffect } from 'react'
 import { Box, Card, Grid, Stack, Typography } from '@mui/material'
-import React from 'react'
 
-import Fade from 'react-reveal/Fade';
+// Animation
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 function FeaturesList({ item }) {
     let bgcolor = item.id % 2 !== 0
         ? 'linear-gradient(90deg, rgba(255,139,0,0.1) 10%, rgba(255,255,255,0) 90%)'
         : 'white';
 
+    useEffect(() => {
+        AOS.init({ duration: "500", delay: "400", once: true });
+    }, [])
+
     return (
         <>
             <Grid item xs={12} md={4}>
-                <Fade left opposite >
+                <div data-aos="fade-up">
+
                     <Card sx={{
                         borderRadius: '30px',
                         m: 1,
@@ -36,8 +44,7 @@ function FeaturesList({ item }) {
                             </Stack>
                         </Stack>
                     </Card>
-                </Fade>
-
+                </div>
             </Grid>
         </>
     )

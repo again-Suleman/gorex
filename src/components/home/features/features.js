@@ -4,8 +4,8 @@ import Title from '../../reusable/Title'
 
 //components
 import { featureItems } from './data'
-import FeatureItems from './featuresList'
-import Fade from 'react-reveal/Fade';
+import FeaturesList from './featuresList'
+
 
 
 function Features() {
@@ -16,7 +16,7 @@ function Features() {
                 <Box>
                     <Grid container sx={{ my: 10, }}>
                         {featureItems.map((item) => (
-                            <FeatureItems key={item.id} item={item} />
+                            <FeaturesList key={item.id} item={item} />
                         ))}
                     </Grid>
                 </Box>

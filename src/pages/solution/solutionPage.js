@@ -4,14 +4,18 @@ import SolutionsHeader from '../../components/solutions/solutionsHeader/solution
 import Tracking from '../../components/solutions/tracking/tracking'
 import RedSea from '../../components/solutions/redSea/redSea'
 import ContactBottom from '../../components/reusable/contactBottom'
+import { Box } from '@mui/system'
 
 function Solutions() {
   return (
     <>
-      <SolutionsHeader />
-      <Tracking />
-      <RedSea />
-      <ContactBottom bgcolor='#fafafa' />
+      <Box>
+        <SolutionsHeader />
+        <Tracking />
+        <RedSea />
+        <ContactBottom bgcolor='#fafafa' />
+
+      </Box>
     </>
   )
 }

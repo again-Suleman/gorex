@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { workingItems } from './data'
 import { Box, Stack, Typography } from '@mui/material'
 
@@ -6,6 +6,10 @@ import { Box, Stack, Typography } from '@mui/material'
 import Title from '../../reusable/Title'
 import WorkingList from './workingList'
 import WorkingBottom from './Bottom part/workingBottom'
+
+// Animation
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 
@@ -31,14 +35,21 @@ const styleBox1 = {
 
 
 function Working() {
+
+    useEffect(() => {
+        AOS.init({ duration: "500", delay: "400", once: true });
+    }, [])
+
     return (
         <>
             <Box sx={{ py: 15 }}>
-                <Stack direction={'column'} sx={{px:{ xs: 2, sm: 5, md: 8, lg: 11 } }}>
+                <Stack direction={'column'} sx={{ px: { xs: 2, sm: 5, md: 8, lg: 11 } }}>
                     <Box sx={styleBox1}>
                         <Box>
                             <Title title='HOW GOREX WORKS' heading='The Ultimate Destination for Auto Services and Repairs' />
-                            <Typography variant='h3' sx={{ width: { xs: '100%',md: '80%'},px: { xs: 1, sm: 0 }, py: 4, pb: {xs: 2, sm:8}, color: '#8b8b8b', fontSize: { xs: '14px', sm: '16px', md: '20px' }}}>With the Gorex app, booking automotive services is now easier and more convenient than ever. customers can choose from a wide range of services and products from trusted service providers, and the Gorex app ensures a hassle-free booking process</Typography>
+                            <div data-aos="fade-down">
+                                <Typography variant='h3' sx={{ width: { xs: '100%', md: '80%' }, px: { xs: 1, sm: 0 }, py: 4, pb: { xs: 2, sm: 8 }, color: '#8b8b8b', fontSize: { xs: '14px', sm: '16px', md: '20px' } }}>With the Gorex app, booking automotive services is now easier and more convenient than ever. customers can choose from a wide range of services and products from trusted service providers, and the Gorex app ensures a hassle-free booking process</Typography>
+                            </div>
                         </Box>
                     </Box>
 
@@ -47,9 +58,11 @@ function Working() {
                             <WorkingList item={item} />
                         </Box>
                     ))}
+
+
                 </Stack>
 
-                <Stack sx={{px:{ xs: 2, sm: 5, md: 8, lg: 11 }, mt: 15,  background: 'linear-gradient(90deg, rgba(54,35,128,1) 15%, rgba(73,204,147,1) 90%)', overflow: 'hidden' }}>
+                <Stack sx={{ px: { xs: 2, sm: 5, md: 8, lg: 11 }, mt: 15, background: 'linear-gradient(90deg, rgba(54,35,128,1) 15%, rgba(73,204,147,1) 90%)', overflow: 'hidden' }}>
                     <WorkingBottom />
                 </Stack>
             </Box>

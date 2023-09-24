@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Stack, Typography } from '@mui/material'
 
 //components
 import Title from '../../reusable/Title'
 import OrangeButton from '../../buttons/orangeButton'
 
+// Animation
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function LeftPatnershipSection() {
+
+    useEffect(() => {
+        AOS.init({ duration: "500", delay: "400", once: true });
+    }, [])
+
     return (
-        <>
+        <div data-aos="fade-up">
             <Stack direction={'column'} >
                 <Title title='PARTNERSHIPS' heading='Join forces for automotive excellence.' />
                 <Stack direction={'column'} spacing={2} sx={{ my: 5, px: { xs: 2, sm: 0 } }}>
@@ -17,7 +26,7 @@ function LeftPatnershipSection() {
                 </Stack>
                 <OrangeButton input='Learn more' />
             </Stack>
-        </>
+        </div>
     )
 }
 

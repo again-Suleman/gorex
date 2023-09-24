@@ -1,13 +1,23 @@
+import React, { useEffect } from 'react'
 import { Button } from '@mui/material';
-import React from 'react';
-import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import { useTheme } from '@emotion/react';
+
+// Icons
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
+
+// Animation
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function TransparentButton(props) {
     const theme = useTheme();
 
+    useEffect(() => {
+        AOS.init({ duration: "500", delay: "100", once: true });
+      }, [])
+
     return (
-        <div>
+        <div data-aos="flip-left">
             <Button
                 startIcon={<QuestionAnswerIcon sx={{ color: 'linear-gradient(152deg, rgba(255,139,0,1) 26%, rgba(255,255,255,1) 90%)', fontSize: '16px' }} />}
                 sx={{

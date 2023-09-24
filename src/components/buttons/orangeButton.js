@@ -1,18 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button } from '@mui/material'
 import { useTheme } from '@emotion/react'
-
 
 // Icons
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-function OrangeButton({ boxShape, outline, input, type='none', fullWidth, fullHeight, margin }) {
+// Animation
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+function OrangeButton({ boxShape, outline, input, type = 'none', fullWidth, fullHeight, margin }) {
   const theme = useTheme()
   const box = boxShape ? '10px' : '999px'
   const border = outline ? `1px solid white` : 'none'
 
+  useEffect(() => {
+    AOS.init({ duration: "500", delay: "100", once: true });
+  }, [])
+
   return (
-    <div>
+    <div data-aos="flip-left">
       <Button
         type={type}
         endIcon={<ArrowForwardIcon sx={{ fontSize: '16px' }} />}

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Box } from '@mui/material';
 
 // Carousal
@@ -12,9 +12,17 @@ import Cards from '../../reusable/cards/cards';
 import { Items } from './data';
 import Bottom from './bottom';
 
+// Animation
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function Carousal() {
+
+    useEffect(() => {
+        AOS.init({ duration: "500", delay: "400", once: true });
+    }, [])
+
 
     const settings = {
         dots: true,
@@ -26,24 +34,26 @@ function Carousal() {
         autoplaySpeed: 1000,
         pauseOnHover: true,
         arrows: false,
-        
+
 
     };
 
     return (
         <>
-            <Box sx={{ py: 10, bgcolor: '#fafafa'}}>
-                <Slider {...settings} >
-                    {Items.map((item) => (
-                        <Box key={item.id} >
-                            <Cards item={item} />
-                        </Box>
-                    ))}
-                </Slider>
-            </Box>
-            <Box  sx={{ pt: 10, bgcolor: '#fafafa'}}>
-                <Bottom />
-            </Box>
+            <div data-aos="fade-up">
+                <Box sx={{ py: 10, bgcolor: '#fafafa' }}>
+                    <Slider {...settings} >
+                        {Items.map((item) => (
+                            <Box key={item.id} >
+                                <Cards item={item} />
+                            </Box>
+                        ))}
+                    </Slider>
+                </Box>
+                <Box sx={{ pt: 10, bgcolor: '#fafafa' }}>
+                    <Bottom />
+                </Box>
+            </div>
         </>
     );
 }
