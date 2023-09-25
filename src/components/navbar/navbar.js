@@ -158,16 +158,20 @@ function Navbar() {
                         </IconButton>
 
                         {/* default */}
-                        <img src={navImg} alt="Logo" style={{ height: '25px' }} />
+                        <Link to='/'>
+                            <img src={navImg} alt="Logo" style={{ height: '26px' }} />
+                        </Link>
                         <Stack display={{ xs: 'none', md: 'block' }} gap={0.5} direction={'row'}>
                             {navButtons}
                         </Stack>
 
                         <Stack display={{ xs: 'none', md: 'block' }} direction={'row'} gap={1}>
-                            <Button
-                                sx={{ gap: 1, px: '10px', color: 'white', fontSize: '12px', border: '1px solid white', background: 'rgba(255,255,255,0.2)', borderRadius: '999px', textTransform: 'none', }}
-                            > Login <ArrowForwardIcon sx={{ color: 'white', fontSize: '16px' }} />
-                            </Button>
+                            <a href="https://partner.gorex.ai/web/database/login" target="_blank" >
+                                <Button
+                                    sx={{ gap: 1, px: '15px', color: 'white', fontSize: '12px', border: '1px solid white', background: 'rgba(255,255,255,0.2)', borderRadius: '999px', textTransform: 'none', }}
+                                > Login <ArrowForwardIcon sx={{ color: 'white', fontSize: '16px' }} />
+                                </Button>
+                            </a>
 
                             <IconButton>
                                 <DarkModeIcon sx={{ color: 'white' }} onClick={colorMode.toggleColorMode}></DarkModeIcon>

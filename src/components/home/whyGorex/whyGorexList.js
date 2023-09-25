@@ -8,6 +8,7 @@ import OrangeButton from '../../buttons/orangeButton'
 // Animation
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 function WhyGorexList({ item }) {
     const theme = useTheme()
@@ -31,7 +32,9 @@ function WhyGorexList({ item }) {
 
                                 <Typography variant='h5' sx={{ fontWeight: 600, mt: 5, mb: 1 }}>{item.title}</Typography>
                                 <Typography variant='h6' sx={{ mb: 2, color: '#ffd094' }}>{item.text}</Typography>
-                                <OrangeButton input='Contact Us' outline={true} />
+                                <Link to='/contactus'>
+                                    <OrangeButton input='Contact Us' outline={true} />
+                                </Link>
                             </Card>
                         </>
                     ) : (

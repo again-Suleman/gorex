@@ -8,6 +8,7 @@ import OrangeButton from '../../buttons/orangeButton'
 // Animation
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 function LeftPatnershipSection() {
 
@@ -24,7 +25,9 @@ function LeftPatnershipSection() {
                     <Typography variant='h5' sx={{ color: '#8b8b8b', fontSize: { xs: '14px', sm: '18px' } }} >Our goal is to work together to achieve shared success and create long-term value. We are committed to empowering our partners to succeed through strategic guidance and access to our network of resources.</Typography>
                     <Typography variant='h5' sx={{ color: '#8b8b8b', fontSize: { xs: '14px', sm: '18px' } }} >By fostering strong partnerships, we ensure that our customers receive the best automotive services available. We’re committed to building lasting relationships that deliver the best possible outcomes for everyone.</Typography>
                 </Stack>
-                <OrangeButton input='Learn more' />
+                <Link to='/partnerships'>
+                    <OrangeButton input='Learn more' />
+                </Link>
             </Stack>
         </div>
     )

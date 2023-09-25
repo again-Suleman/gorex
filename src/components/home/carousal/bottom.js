@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import subject from '../../../assets/carousel/about-us-img@2x.png';
 import sideImg1 from '../../../assets/carousel/about-us-card1.png';
@@ -19,10 +20,10 @@ function Bottom() {
                             alignItems: 'center',
                             justifyContent: 'center',
                             position: 'relative',
-                        
+
                             '.subject ': {
                                 position: 'relative',
-                                transform: {xs: 'scale(0.7) translateY(85px)', sm: 'scale(1)'},
+                                transform: { xs: 'scale(0.7) translateY(85px)', sm: 'scale(1)' },
                                 transition: '0.3s all ease-in-out',
                                 zIndex: 1
                             },
@@ -34,24 +35,24 @@ function Bottom() {
                             '.img1, .img2': {
                                 position: 'absolute',
                                 transition: '0.5s all',
-                                transform: {xs: 'scale(0.6)', sm: 'scale(1)'},
+                                transform: { xs: 'scale(0.6)', sm: 'scale(1)' },
                             },
                             '.img1': {
-                                right: {xs: '60px', sm:'100px'},
-                                top: {xs: '20px', sm:'-50px'},
+                                right: { xs: '60px', sm: '100px' },
+                                top: { xs: '20px', sm: '-50px' },
                                 zIndex: 0
                             },
                             '.img2': {
-                                left: {xs: '-190px', sm:'-140px'},
-                                top: {xs: '-40px', sm:'-150px'},
+                                left: { xs: '-190px', sm: '-140px' },
+                                top: { xs: '-40px', sm: '-150px' },
                                 zIndex: 1
 
                             },
                             '.subject:hover + .img-container .img1': {
-                                transform: {xs: 'translateX(20px) scale(0.6)'  ,sm:'translateX(20px) scale(1)'},
+                                transform: { xs: 'translateX(20px) scale(0.6)', sm: 'translateX(20px) scale(1)' },
                             },
                             '.subject:hover + .img-container .img2': {
-                                transform: {xs: 'translateY(20px) scale(0.6)'  ,sm:'translateY(20px) scale(1)'},
+                                transform: { xs: 'translateY(20px) scale(0.6)', sm: 'translateY(20px) scale(1)' },
                             },
                         }}
                     >
@@ -59,10 +60,10 @@ function Bottom() {
                             className="background-shape"
                             sx={{
                                 position: 'absolute',
-                                bottom: { xs:'-190px' ,sm:'-230px'},
+                                bottom: { xs: '-190px', sm: '-230px' },
                                 background: 'linear-gradient(186deg, rgba(255,139,0,0.4) 7%, rgba(255,255,255,0) 50%)',
-                                width: { xs:'350px' ,sm:'500px'},
-                                height: { xs:'350px' ,sm:'500px'},
+                                width: { xs: '350px', sm: '500px' },
+                                height: { xs: '350px', sm: '500px' },
                                 borderRadius: '50%',
                                 zIndex: 0,
                             }}
@@ -87,7 +88,9 @@ function Bottom() {
 
                         <Typography variant='h3' sx={{ fontWeight: 600, fontFamily: 'Poppins', py: 2 }}>About Go and Relax Co.</Typography>
                         <Typography variant='h4' sx={{ fontFamily: 'Poppins', pb: 2, fontSize: '18px' }}>Gorex is your one-stop shop for all your automotive needs. We connect you with trusted merchants who offer a wide range of services, including tire replacement, tinting, car washing, repairs, oil change, and much more</Typography>
-                        <OrangeButton input={'Learn more'} />
+                        <Link to="/aboutus">
+                            <OrangeButton input={'Learn more'} />
+                        </Link>
 
                     </Stack>
                 </Stack>

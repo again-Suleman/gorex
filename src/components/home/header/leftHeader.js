@@ -24,9 +24,9 @@ function LeftHeader() {
                 <Box sx={{ my: 10 }}>
                     <Typography variant='h4' sx={{ maxWidth: '70%', fontSize: { xs: '20px', sm: '24px' }, fontWeight: '600', mx: 2 }}>Expand your reach and become a Gorex partner, Join today!</Typography>
                     <Stack direction={{ xs: 'column', sm: 'row' }} gap={2} sx={{ my: 2 }}>
-                        <Link to="/web/login">
+                        <a href="https://partner.gorex.ai/web/login" target="_blank" >
                             <OrangeButton input="Register now" />
-                        </Link>
+                        </a>
 
                         <Link to="/contactus">
                             <TransparentButton input="Contact us" />
